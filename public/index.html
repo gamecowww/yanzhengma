@@ -1044,7 +1044,7 @@
 				}
 			}
 		</style>
-		<script src="https://captcha.gurl.eu.org/cap.min.js"></script>
+		<script src="https://yanzhengma.gamecowww.workers.dev/cap.min.js"></script>
 	</head>
 	<body>
 		<div class="bg-animated"></div>
@@ -1088,7 +1088,7 @@
 							<h3>Interactive Demo</h3>
 							<div class="demo-widget">
 								<div class="demo-widget-container">
-									<cap-widget id="cap" data-cap-api-endpoint="https://captcha.gurl.eu.org/api/"></cap-widget>
+									<cap-widget id="cap" data-cap-api-endpoint="https://yanzhengma.gamecowww.workers.dev/api/"></cap-widget>
 								</div>
 								<div class="demo-status" id="demoStatus">
 									<div class="status-message">Complete the CAPTCHA above to see it in action</div>
@@ -1107,12 +1107,12 @@
 								
 								<div class="tab-content active" data-tab="html">
 									<div class="code-block"><!-- <span class="key">Step 1:</span> Add the script -->
-&lt;<span class="key">script</span> <span class="key">src</span>=<span class="string">"https://captcha.gurl.eu.org/cap.min.js"</span>&gt;&lt;/<span class="key">script</span>&gt;
+&lt;<span class="key">script</span> <span class="key">src</span>=<span class="string">"https://yanzhengma.gamecowww.workers.dev/cap.min.js"</span>&gt;&lt;/<span class="key">script</span>&gt;
 
 <!-- <span class="key">Step 2:</span> Add the widget -->
 &lt;<span class="key">cap-widget</span> 
   <span class="key">id</span>=<span class="string">"cap"</span> 
-  <span class="key">data-cap-api-endpoint</span>=<span class="string">"https://captcha.gurl.eu.org/api/"</span>&gt;
+  <span class="key">data-cap-api-endpoint</span>=<span class="string">"https://yanzhengma.gamecowww.workers.dev/api/"</span>&gt;
 &lt;/<span class="key">cap-widget</span>&gt;</div>
 								</div>
 								
@@ -1126,7 +1126,7 @@ widget.addEventListener(<span class="string">"solve"</span>, <span class="key">a
   console.log(<span class="string">"CAPTCHA solved, token:"</span>, token);
   
   <span class="key">// Validate the token server-side</span>
-  <span class="key">const</span> result = <span class="key">await</span> fetch(<span class="string">'https://captcha.gurl.eu.org/api/validate'</span>, {
+  <span class="key">const</span> result = <span class="key">await</span> fetch(<span class="string">'https://yanzhengma.gamecowww.workers.dev/api/validate'</span>, {
     method: <span class="string">'POST'</span>,
     headers: { <span class="string">'Content-Type'</span>: <span class="string">'application/json'</span> },
     body: JSON.stringify({ 
@@ -1146,7 +1146,7 @@ widget.addEventListener(<span class="string">"solve"</span>, <span class="key">a
   <span class="key">const</span> { captchaToken } = req.body;
   
   <span class="key">try</span> {
-    <span class="key">const</span> validation = <span class="key">await</span> fetch(<span class="string">'https://captcha.gurl.eu.org/api/validate'</span>, {
+    <span class="key">const</span> validation = <span class="key">await</span> fetch(<span class="string">'https://yanzhengma.gamecowww.workers.dev/api/validate'</span>, {
       method: <span class="string">'POST'</span>,
       headers: { <span class="string">'Content-Type'</span>: <span class="string">'application/json'</span> },
       body: JSON.stringify({ 
@@ -1423,7 +1423,7 @@ widget.addEventListener(<span class="string">"solve"</span>, <span class="key">a
 						console.log('CAPTCHA solved, token:', token);
 
 						try {
-							const result = await fetch('https://captcha.gurl.eu.org/api/validate', {
+							const result = await fetch('https://yanzhengma.gamecowww.workers.dev/api/validate', {
 								method: 'POST',
 								headers: { 'Content-Type': 'application/json' },
 								body: JSON.stringify({
