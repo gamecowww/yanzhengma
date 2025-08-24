@@ -1044,8 +1044,35 @@
 				}
 			}
             
+            /* Ensure CAPTCHA button is clickable */
+            cap-widget {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+            }
+            
+            /* Hide the attribution link while keeping button functional */
+            cap-widget::part(attribution) {
+                display: none !important;
+            }
 		</style>
 		<script src="https://auth.cs76.com/cap.min.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				const capWidget = document.querySelector('cap-widget');
+				if (capWidget) {
+					// Reinitialize click handler
+					capWidget.addEventListener('click', function() {
+						if (window.Cap && !this.hasAttribute('data-state')) {
+							new window.Cap({
+								apiEndpoint: 'https://auth.cs76.com/api/'
+							}, this).solve().catch(console.error);
+						}
+					});
+				}
+			});
+		</script>
 	</head>
 	<body>
 		<div class="bg-animated"></div>
